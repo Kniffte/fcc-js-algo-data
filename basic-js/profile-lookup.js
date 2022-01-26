@@ -35,13 +35,12 @@ const contacts = [
         } else {
           return "No such property";
         }
-      } else {
-        return "No such contact";
       }
     }
+    return "No such contact";
     // Only change code above this line
   }
   
-  lookUpProfile("Kristian", "lastName");
-  lookUpProfile("Sherlock", "likes");
-  lookUpProfile("Harry", "likes");
+  let a1 = lookUpProfile("Kristian", "lastName");
+  let a2 = lookUpProfile("Sherlock", "likes");
+  let a3 = lookUpProfile("Harry", "likes");
