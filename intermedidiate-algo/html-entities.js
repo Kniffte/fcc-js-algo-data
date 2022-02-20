@@ -6,9 +6,11 @@ function convertHTML(str) {
       '"': "&quot;",
       "'": "&apos;"}
     for (const [key, value] of Object.entries(htmlEntities)) {
-        str = str.replace(key, value);
+        const regex = new RegExp(`${key}`, "g")
+        str = str.replace(regex, value);
     }
     return str;
   }
   
-  console.log(convertHTML("Dolce & Gabbana"));
+  // console.log(convertHTML("Dolce & Gabbana"));
+  console.log(convertHTML("Hamburgers < Pizza < Tacos"));
